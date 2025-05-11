@@ -12,6 +12,35 @@
       color: #333;
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: #0d47a1;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    nav .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: #f2f6fc;
       padding: 60px 20px 40px;
@@ -86,6 +115,21 @@
     }
 
     @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav .nav-links {
+        margin-top: 10px;
+      }
+
+      nav .nav-links a {
+        margin-left: 0;
+        margin-right: 15px;
+        display: inline-block;
+      }
+
       header h1 {
         font-size: 24px;
       }
@@ -98,12 +142,27 @@
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">Omkar Enterprises</a>
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="invest.html">Invest Now</a>
+      <a href="plans.html">Our Plans</a>
+      <a href="refer.html">Referral Partner</a>
+      <a href="terms.html">T&C</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>Welcome to Omkar Enterprises</h1>
     <p>Empowering Investors with Transparent, Legally Backed Fixed-Income Opportunities.</p>
     <a href="#learnmore" class="cta-button">Learn More</a>
   </header>
 
+  <!-- Section -->
   <div class="section" id="learnmore">
     <h2>Why Choose Us</h2>
     <p>We offer a reliable alternative to traditional investments by combining 15+ years of equity market experience with a secure, legal investment structure.</p>
@@ -116,6 +175,7 @@
     <a href="https://yourformlink.com" class="cta-button">Check Eligibility</a>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Omkar Enterprises. All rights reserved.
   </footer>
