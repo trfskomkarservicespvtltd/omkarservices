@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Investment Plans – Omkar Enterprises</title>
+  <title>Our Plans – Omkar Enterprises</title>
   <style>
     body {
       margin: 0;
@@ -12,7 +12,6 @@
       color: #333;
     }
 
-    /* Navigation Bar */
     nav {
       background-color: #0d47a1;
       padding: 15px 20px;
@@ -29,10 +28,23 @@
       text-decoration: none;
     }
 
+    nav .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
     nav .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
       font-size: 14px;
       font-weight: 500;
     }
@@ -41,49 +53,59 @@
       text-decoration: underline;
     }
 
-    header {
-      background-color: #f2f6fc;
-      padding: 50px 20px 30px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 28px;
-      margin: 0;
-      color: #0d47a1;
-    }
-
-    header p {
-      font-size: 15px;
-      color: #555;
-      margin-top: 10px;
+    @media (max-width: 768px) {
+      nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+      }
+      nav .nav-links.active {
+        display: flex;
+      }
+      nav .menu-toggle {
+        display: block;
+      }
     }
 
     section {
-      padding: 30px 20px;
+      max-width: 100%;
+      padding: 20px;
       box-sizing: border-box;
+      background-color: #fff;
     }
 
-    .plans-container {
-      max-width: 700px;
+    .container {
+      max-width: 600px;
       margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a1a1a;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
 
     .alert {
       background-color: #ffebee;
       color: #d32f2f;
-      padding: 12px;
+      padding: 10px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 15px;
       text-align: center;
+      font-size: 15px;
     }
 
-    .plan-card {
+    .plan-box {
       border: 1px solid #ccc;
       border-radius: 10px;
       padding: 15px;
-      margin: 20px 0;
+      margin-top: 20px;
+    }
+
+    .plan-box span {
+      font-weight: 500;
     }
 
     .plan-header {
@@ -92,38 +114,31 @@
       flex-wrap: wrap;
     }
 
-    .plan-range {
-      font-weight: 500;
-    }
-
-    .plan-rate {
+    .badge {
       padding: 4px 10px;
       border-radius: 6px;
       font-weight: bold;
     }
 
-    .rate-2 { background-color: #e0f7fa; color: #00796b; }
-    .rate-2_5 { background-color: #e8f5e9; color: #2e7d32; }
-    .rate-3_25 { background-color: #fff8e1; color: #f9a825; }
-    .rate-3_5 { background-color: #fce4ec; color: #c2185b; }
-    .rate-4 { background-color: #ede7f6; color: #512da8; }
-
-    .plan-description {
+    .note {
       font-size: 14px;
       color: #666;
-      margin-top: 8px;
+      margin-top: 5px;
     }
 
-    .contact-button {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #1976d2;
-      color: #fff;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
+    .contact-btn {
       text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-btn a {
+      background-color: #1976d2;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
     }
 
     footer {
@@ -133,23 +148,6 @@
       background-color: #f8f8f8;
       color: #777;
     }
-
-    @media screen and (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav .nav-links {
-        margin-top: 10px;
-      }
-
-      nav .nav-links a {
-        margin-left: 0;
-        margin-right: 15px;
-        display: inline-block;
-      }
-    }
   </style>
 </head>
 <body>
@@ -157,71 +155,69 @@
   <!-- Navigation -->
   <nav>
     <a href="index.html" class="logo">Omkar Enterprises</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="menu">
       <a href="about.html">About Us</a>
-      <a href="plans.html">Investment Plans</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="invest.html">Invest Now</a>
+      <a href="plans.html">Our Plans</a>
       <a href="refer.html">Referral Partner</a>
-      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Fixed Monthly Investment Plans</h1>
-    <p>Choose the plan that suits your goals – all plans are legally backed and provide consistent monthly income.</p>
-  </header>
-
-  <!-- Plans Section -->
+  <!-- Main Section -->
   <section>
-    <div class="plans-container">
-
+    <div class="container">
+      <h2>Fixed Monthly Investment Plans</h2>
       <div class="alert">
         ⚠️ Please check your eligibility before selecting any plan. It varies based on profile & history.
       </div>
 
-      <div class="plan-card">
+      <!-- Plans -->
+      <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-range">₹1,00,000 – ₹4,99,999</span>
-          <span class="plan-rate rate-2">2% Monthly</span>
+          <span>₹1,00,000 – ₹4,99,999</span>
+          <span class="badge" style="background-color: #e0f7fa; color: #00796b;">2% Monthly</span>
         </div>
-        <p class="plan-description">Low risk – Perfect for first-time investors</p>
+        <p class="note">Low risk – Perfect for first-time investors</p>
       </div>
 
-      <div class="plan-card">
+      <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-range">₹5,00,000 – ₹9,99,999</span>
-          <span class="plan-rate rate-2_5">2.5% Monthly</span>
+          <span>₹5,00,000 – ₹9,99,999</span>
+          <span class="badge" style="background-color: #e8f5e9; color: #2e7d32;">2.5% Monthly</span>
         </div>
-        <p class="plan-description">Stable monthly growth with mid-tier commitment</p>
+        <p class="note">Stable monthly growth with mid-tier commitment</p>
       </div>
 
-      <div class="plan-card">
+      <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-range">₹10,00,000 – ₹14,99,999</span>
-          <span class="plan-rate rate-3_25">3.25% Monthly</span>
+          <span>₹10,00,000 – ₹14,99,999</span>
+          <span class="badge" style="background-color: #fff8e1; color: #f9a825;">3.25% Monthly</span>
         </div>
-        <p class="plan-description">Higher return for long-term investors</p>
+        <p class="note">Higher return for long-term investors</p>
       </div>
 
-      <div class="plan-card">
+      <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-range">₹15,00,000 – ₹19,99,999</span>
-          <span class="plan-rate rate-3_5">3.5% Monthly</span>
+          <span>₹15,00,000 – ₹19,99,999</span>
+          <span class="badge" style="background-color: #fce4ec; color: #c2185b;">3.5% Monthly</span>
         </div>
-        <p class="plan-description">Premium return with moderate flexibility</p>
+        <p class="note">Premium return with moderate flexibility</p>
       </div>
 
-      <div class="plan-card">
+      <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-range">₹20,00,000 – ₹25,00,000</span>
-          <span class="plan-rate rate-4">4% Monthly</span>
+          <span>₹20,00,000 – ₹25,00,000</span>
+          <span class="badge" style="background-color: #ede7f6; color: #512da8;">4% Monthly</span>
         </div>
-        <p class="plan-description">Maximize returns with exclusive high-tier plan</p>
+        <p class="note">Maximize returns with exclusive high-tier plan</p>
       </div>
 
-      <div style="text-align: center;">
-        <a href="contact.html" class="contact-button">Contact Us to Confirm Eligibility</a>
+      <!-- Contact Button -->
+      <div class="contact-btn">
+        <a href="contact.html">Contact Us to Confirm Eligibility</a>
       </div>
     </div>
   </section>
@@ -230,6 +226,12 @@
   <footer>
     &copy; 2025 Omkar Enterprises. All rights reserved.
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
