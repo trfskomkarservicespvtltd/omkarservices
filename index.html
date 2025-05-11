@@ -12,7 +12,7 @@
       color: #333;
     }
 
-    /* Navigation Bar */
+    /* NAVIGATION */
     nav {
       background-color: #0d47a1;
       padding: 15px 20px;
@@ -29,10 +29,23 @@
       text-decoration: none;
     }
 
+    nav .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
     nav .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
       font-size: 14px;
       font-weight: 500;
     }
@@ -41,6 +54,7 @@
       text-decoration: underline;
     }
 
+    /* HEADER */
     header {
       background: #f2f6fc;
       padding: 60px 20px 40px;
@@ -114,28 +128,21 @@
       color: #777;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
       nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
         margin-top: 10px;
       }
 
-      nav .nav-links a {
-        margin-left: 0;
-        margin-right: 15px;
-        display: inline-block;
+      nav .nav-links.active {
+        display: flex;
       }
 
-      header h1 {
-        font-size: 24px;
-      }
-
-      .section {
-        padding: 30px 15px;
+      nav .menu-toggle {
+        display: block;
       }
     }
   </style>
@@ -145,7 +152,8 @@
   <!-- Navigation -->
   <nav>
     <a href="index.html" class="logo">Omkar Enterprises</a>
-    <div class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="menu">
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
       <a href="invest.html">Invest Now</a>
@@ -179,6 +187,13 @@
   <footer>
     &copy; 2025 Omkar Enterprises. All rights reserved.
   </footer>
+
+  <!-- JS for toggle menu -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
