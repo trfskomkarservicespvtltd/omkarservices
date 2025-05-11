@@ -1,0 +1,14 @@
+<!-- header.html (to include in all pages) -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="our-plans.html">Our Plans</a></li>
+      <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="invest-now.html">Invest Now</a></li>
+      <li><a href="referral-partner.html">Referral Partner</a></li>
+    </ul>
+  </nav>
+</header>
