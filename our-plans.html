@@ -12,6 +12,35 @@
       color: #333;
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: #0d47a1;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    nav .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background-color: #f2f6fc;
       padding: 50px 20px 30px;
@@ -104,15 +133,46 @@
       background-color: #f8f8f8;
       color: #777;
     }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav .nav-links {
+        margin-top: 10px;
+      }
+
+      nav .nav-links a {
+        margin-left: 0;
+        margin-right: 15px;
+        display: inline-block;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">Omkar Enterprises</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="plans.html">Investment Plans</a>
+      <a href="refer.html">Referral Partner</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>Fixed Monthly Investment Plans</h1>
     <p>Choose the plan that suits your goals – all plans are legally backed and provide consistent monthly income.</p>
   </header>
 
+  <!-- Plans Section -->
   <section>
     <div class="plans-container">
 
@@ -161,11 +221,12 @@
       </div>
 
       <div style="text-align: center;">
-        <a href="https://yourwebsite.com/contact" class="contact-button">Contact Us to Confirm Eligibility</a>
+        <a href="contact.html" class="contact-button">Contact Us to Confirm Eligibility</a>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Omkar Enterprises. All rights reserved.
   </footer>
