@@ -3,37 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Secure and high-return investment opportunities.">
-    <meta name="author" content="Omkar Enterprises">
-    <meta name="robots" content="index, follow">
-    <title>Welcome to Omkar Enterprises</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the CSS file -->
+    <title>Welcome | Omkar Enterprises</title>
+    <meta name="description" content="Welcome to Omkar Enterprises — offering secured investment opportunities with monthly returns. Invest with confidence and transparency.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9fc;
+            color: #2b2d42;
+        }
+
+        header {
+            background-color: #2b2d42;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('your-image.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .hero a.button {
+            background-color: #ffc107;
+            color: #2b2d42;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .hero a.button:hover {
+            background-color: #e0a800;
+        }
+
+        .info-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .info-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .info-box h3 {
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2b2d42;
+            color: #ffffff;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="our-plans.html">Our Plans</a></li>
-                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="invest-now.html">Invest Now</a></li>
-                <li><a href="referral-partner.html">Referral Partner</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to Omkar Enterprises</h1>
-            <p>Your secure future starts here with our fixed-return investment plans.</p>
-            <a href="invest-now.html" class="cta-button">Start Investing Today</a>
-        </section>
-    </main>
+<header>
+    <h1>Omkar Enterprises</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="our-plans.html">Our Plans</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="invest-now.html">Invest Now</a></li>
+            <li><a href="referral-partner.html">Referral Partner</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2025 Omkar Enterprises. All rights reserved.</p>
-    </footer>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Secure Your Future with Confidence</h1>
+        <p>Fixed Monthly Returns | Capital Safety | Legal Protection</p>
+        <a href="invest-now.html" class="button">Start Investing</a>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>Why Choose Omkar Enterprises?</h2>
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>✔️ Fixed Returns</h3>
+            <p>Earn consistent monthly income on your investment.</p>
+        </div>
+        <div class="info-box">
+            <h3>🔒 Capital Protection</h3>
+            <p>Every investment is backed by legal documentation and PDCs.</p>
+        </div>
+        <div class="info-box">
+            <h3>📈 Growing Trust</h3>
+            <p>Trusted by over 200+ investors across India.</p>
+        </div>
+        <div class="info-box">
+            <h3>💬 Personalized Support</h3>
+            <p>Talk directly to our team via WhatsApp for any assistance.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Omkar Enterprises | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
