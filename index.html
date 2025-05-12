@@ -4,6 +4,40 @@
   <meta charset="UTF-8">
   <title>Omkar Enterprises</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+.animation-section {
+  background-color: #ffffff;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.slow-fade-icons {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.animated-icon {
+  opacity: 0;
+  animation: slideIn 2s ease forwards;
+  animation-delay: calc(var(--i) * 0.5s);
+  position: relative;
+}
+
+.animated-icon:nth-child(1) { --i: 1; }
+.animated-icon:nth-child(2) { --i: 2; }
+.animated-icon:nth-child(3) { --i: 3; }
+.animated-icon:nth-child(4) { --i: 4; }
+.animated-icon:nth-child(5) { --i: 5; }
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 </head>
 <body>
 <section class="animation-section text-center py-5">
