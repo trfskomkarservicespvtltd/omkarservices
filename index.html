@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Investment Eligibility</title>
+  <title>Eligibility Check</title>
 </head>
 <body>
-  <h1>Check Investment Eligibility</h1>
+  <h2>Investment Eligibility Form</h2>
   <form id="eligibilityForm">
-    Age: <input type="number" id="age" required><br>
-    Monthly Income: <input type="number" id="income" required><br>
-    Investment Amount: <input type="number" id="investment" required><br>
-    <label><input type="checkbox" id="acceptTerms"> I accept the terms</label><br>
+    <label>Age: <input type="number" id="age" required /></label><br>
+    <label>Income: <input type="number" id="income" required /></label><br>
+    <label>Investment Amount: <input type="number" id="investment" required /></label><br>
+    <label><input type="checkbox" id="acceptTerms" /> I accept the terms</label><br>
     <button type="submit">Proceed</button>
   </form>
 
@@ -23,10 +21,10 @@
         age: parseInt(document.getElementById('age').value),
         income: parseInt(document.getElementById('income').value),
         investment: parseInt(document.getElementById('investment').value),
-        acceptTerms: document.getElementById('acceptTerms').checked
+        acceptTerms: document.getElementById('acceptTerms').checked,
       };
 
-      const res = await fetch('https://your-backend-url.up.railway.app/check-eligibility', {
+      const res = await fetch('https://omkar-backend-production.up.railway.app/check-eligibility', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -35,11 +33,11 @@
       const result = await res.json();
 
       if (result.status === 'eligible') {
-        window.location.href = '/eligible.html';
+        window.location.href = '/kyc-standard.html';
       } else if (result.status === 'ineligible_accepted') {
-        window.location.href = '/ineligible.html';
+        window.location.href = '/kyc-disclaimer.html';
       } else {
-        alert('Please accept terms to proceed.');
+        alert('You must accept the terms to proceed.');
       }
     });
   </script>
