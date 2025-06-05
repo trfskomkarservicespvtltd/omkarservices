@@ -202,20 +202,27 @@
         investment: document.getElementById("investment").value,
         acceptTerms: true
       };
-      fetch("https://omkar-backend-production.up.railway.app/check-eligibility", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(result => {
-        if (result.status === "eligible") {
-          alert("✅ You're eligible! Welcome aboard.");
-        } else {
-          alert("⚠️ You're not fully eligible, but we may proceed with your approval.");
-        }
-      })
-      .catch(() => alert("Something went wrong. Please try again later."));
+fetch("https://omkar-backend-production.up.railway.app/api/submit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+})
+.then(response => response.json())
+.then(data => {
+  if (data.status === "success" && data.eligible) {
+    alert("✅ You're eligible! Welcome aboard.");
+  } else if (data.status === "success" && !data.eligible) {
+    alert("❌ Sorry, you're not eligible based on your responses.");
+  } else {
+    alert("⚠️ Something went wrong. Please try again.");
+  }
+})
+.catch(error => {
+  console.error("Error:", error);
+  alert("❌ Submission failed. Try again later.");
+});
     });
   </script>
 </body>
