@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hero {
+  background: url('https://your-image-url.com/team-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+}
+
+.calculator, .info {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.calculator h2, .info h2 {
+  margin-bottom: 1rem;
+}
+
+input[type="number"] {
+  padding: 0.6rem;
+  width: 250px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background: #002b85;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0041b3;
+}
+
+#monthlyReturnOutput {
+  margin-top: 1rem;
+  font-weight: bold;
+}
