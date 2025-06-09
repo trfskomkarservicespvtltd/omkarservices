@@ -17,7 +17,7 @@
     .hero {
       position: relative;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     .hero img {
       width: 100%;
@@ -40,24 +40,10 @@
       font-size: 2.2rem;
     }
 
-    /* WELCOME */
-    .welcome {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    .welcome h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .welcome p {
-      max-width: 800px;
-      margin: auto;
-    }
-
     /* CALCULATOR */
     .calculator {
       background: white;
-      margin: 2rem auto;
+      margin: 2rem auto 1rem;
       padding: 1.5rem;
       border-radius: 12px;
       max-width: 500px;
@@ -81,6 +67,20 @@
     .result {
       margin-top: 1rem;
       font-weight: bold;
+    }
+
+    /* WELCOME TEXT */
+    .welcome {
+      padding: 1rem 1rem 2rem;
+      text-align: center;
+    }
+    .welcome h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .welcome p {
+      max-width: 800px;
+      margin: auto;
     }
 
     /* CTA */
@@ -135,12 +135,6 @@
     </div>
   </section>
 
-  <!-- WELCOME -->
-  <section class="welcome">
-    <h2>Guaranteed Returns, Zero Risk</h2>
-    <p>At Omkar Enterprises, we provide secured monthly returns on your investments. Our experts manage the market, you enjoy the profits. Simple, safe, and transparent.</p>
-  </section>
-
   <!-- CALCULATOR -->
   <section class="calculator">
     <h3>Check Your Monthly Return</h3>
@@ -148,6 +142,12 @@
     <br>
     <button onclick="calculate()">Calculate</button>
     <div class="result" id="result"></div>
+  </section>
+
+  <!-- WELCOME TEXT -->
+  <section class="welcome">
+    <h2>Guaranteed Returns, Zero Risk</h2>
+    <p>At Omkar Enterprises, we provide secured monthly returns on your investments. Our experts manage the market, you enjoy the profits. Simple, safe, and transparent.</p>
   </section>
 
   <!-- CTA -->
