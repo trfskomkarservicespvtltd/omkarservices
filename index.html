@@ -197,18 +197,49 @@
   </footer>
 
   <script>
-    function calculate() {
-      const amount = parseFloat(document.getElementById("amount").value);
-      if (isNaN(amount) || amount <= 0) {
-        document.getElementById("result").innerText = "Please enter a valid amount.";
-        return;
-      }
+  const returnRates = {
+    25: { ror: 2.063, annual: 25 },
+    35: { ror: 1.988, annual: 24 },
+    45: { ror: 1.913, annual: 23 },
+    50: { ror: 1.875, annual: 23 }
+  };
 
-      const monthlyReturn = amount * 0.04; // 4% monthly
-      const resultText = `Estimated Monthly Return: ₹${monthlyReturn.toFixed(2)}`;
-      document.getElementById("result").innerText = resultText;
+  function calculateReturns() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const security = parseInt(document.getElementById('security').value);
+
+    if (!amount || amount < 10000) {
+      document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
+      return;
     }
-  </script>
+
+    if (amount < 100000) {
+      document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000. Please enter a higher amount.</strong>';
+      return;
+    }
+
+    const ror = returnRates[security];
+    const monthly = Math.round((amount * ror.ror) / 100);
+    const annual = monthly * 12;
+
+    const fdAnnual = Math.round((amount * 9) / 100);
+    const bondAnnual = Math.round((amount * 10) / 100);
+    const equityAnnual = Math.round((amount * 12) / 100);
+
+    document.getElementById('output').innerHTML = `
+      <strong>With Bank Guarantee at ${security}%:</strong><br>
+      ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
+      ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
+
+      <strong>Compare with Other Options:</strong><br>
+      • Fixed Deposit (9%): ₹${fdAnnual.toLocaleString()} / year<br>
+      • Corporate Bonds (10%): ₹${bondAnnual.toLocaleString()} / year<br>
+      • Equity Mutual Funds (12%): ₹${equityAnnual.toLocaleString()} / year<br><br>
+
+      <em>Note: Higher capital security typically results in slightly lower returns. Choose wisely based on your financial goals.</em>
+    `;
+  }
+</script>
 
 </body>
 </html>
