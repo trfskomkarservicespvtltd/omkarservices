@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Evaluate Investment Fit | Omkar Enterprises</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,17 +41,16 @@
       text-decoration: none;
     }
 
-
+    /* Hero Section */
     .hero {
       position: relative;
       text-align: center;
       color: white;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: auto;
-      display: block;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('assets/hero-banner.png') no-repeat center center/cover;
     }
 
     .hero-text {
@@ -62,16 +61,18 @@
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 10px;
+      color: white;
+      text-align: center;
     }
 
     .hero-text h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 48px;
     }
 
     .hero-text p {
       margin: 10px 0;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .btn {
@@ -92,8 +93,12 @@
     }
   </style>
 </head>
-</header>
-<img src="assets/logo.png" alt="Omkar Logo" class="logo" />
+
+<body class="bg-white text-gray-900">
+
+  <!-- Header Section -->
+  <header>
+    <img src="assets/logo.png" alt="Omkar Logo" class="logo" />
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -102,19 +107,17 @@
         <li><a href="thank-you.html">Thank You</a></li>
       </ul>
     </nav>
-
   </header>
-<body class="bg-white text-gray-900">
 
-  <!-- Hero Banner -->
-<section class="hero">
-    <img src="assets/hero-banner.png" alt="Omkar Enterprises Hero Banner">
+  <!-- Hero Banner Section -->
+  <section class="hero">
     <div class="hero-text">
+      <h1>Welcome to Omkar Enterprises</h1>
+      <p>Your Trusted Fixed-Return Investment Partner</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSXa8WO6ARxL1lYE3S6VltR6K0S1GVSaee3yylb8JjxVwumg/viewform?usp=sharing&ouid=101721087846810975042"
+        class="btn">Know More / Get Started</a>
     </div>
   </section>
-
-  <!-- Original content sections remain unchanged -->
-  <!-- Hero Section below replaced by the new full-screen banner -->
 
   <!-- Investment & Form Section -->
   <section class="bg-gray-100 py-16">
@@ -122,7 +125,8 @@
       <!-- Left Content -->
       <div class="lg:w-1/2 mb-12 lg:mb-0">
         <h1 class="text-4xl font-bold mb-4">Evaluate How Well Our Investment Plan Fits Your Lifestyle</h1>
-        <p class="mb-6 text-lg">Earn fixed monthly returns with 100% capital protection. Backed by 15+ years of trusted market experience.</p>
+        <p class="mb-6 text-lg">Earn fixed monthly returns with 100% capital protection. Backed by 15+ years of trusted
+          market experience.</p>
         <div class="mb-4">
           <span class="trust-badge">✔️ Notarized Agreements</span>
           <span class="trust-badge">🏦 25% Bank Guarantee</span>
@@ -158,7 +162,8 @@
 
           <div>
             <label class="block text-gray-700">Phone Number</label>
-            <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="form-control mt-1">
+            <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number"
+              class="form-control mt-1">
           </div>
 
           <div>
@@ -198,9 +203,21 @@
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl font-bold mb-8">Why Investors Trust Us</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div><div class="text-4xl">🔒</div><h3 class="font-semibold text-lg mt-2">Risk-Free Model</h3><p>We take full market risk. You receive assured monthly payouts.</p></div>
-        <div><div class="text-4xl">🧾</div><h3 class="font-semibold text-lg mt-2">Notarized Agreements</h3><p>Each investor signs a legal agreement with repayment terms.</p></div>
-        <div><div class="text-4xl">📈</div><h3 class="font-semibold text-lg mt-2">Proven Returns</h3><p>100% repayment history with over ₹1.5 crores disbursed.</p></div>
+        <div>
+          <div class="text-4xl">🔒</div>
+          <h3 class="font-semibold text-lg mt-2">Risk-Free Model</h3>
+          <p>We take full market risk. You receive assured monthly payouts.</p>
+        </div>
+        <div>
+          <div class="text-4xl">🧾</div>
+          <h3 class="font-semibold text-lg mt-2">Notarized Agreements</h3>
+          <p>Each investor signs a legal agreement with repayment terms.</p>
+        </div>
+        <div>
+          <div class="text-4xl">📈</div>
+          <h3 class="font-semibold text-lg mt-2">Proven Returns</h3>
+          <p>100% repayment history with over ₹1.5 crores disbursed.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -210,7 +227,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold mb-8 text-center">📌 Frequently Asked Questions (FAQs)</h2>
       <div class="faq-accordion space-y-4 max-w-3xl mx-auto">
-        
+
         <div class="faq-item">
           <div class="faq-question font-semibold">
             <span>1) How does the investment work?</span><span>▼</span>
@@ -247,27 +264,14 @@
       <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;">TRFSK OMKAR SERVICES PRIVATE LIMITED</h2>
       <div style="margin-bottom: 30px;">
         <h3 style="color: #FFA500;">📌 Office Address</h3>
-        <p>DNK Business Bay, Office No. 101, First Floor,<br>
-        Near IndianOil Petrol Pump,<br>
-        Katraj-Kondhwa Road, Gokul Nagar,<br>
-        Katraj, Pune – 411046, Maharashtra</p>
+        <p>DNK Business Bay, Office No. 101, First Floor,<br> Near IndianOil Petrol Pump,<br> Katraj-Kondhwa Road, Gokul Nagar,<br> Katraj, Pune – 411046, Maharashtra</p>
       </div>
       <div style="margin-bottom: 30px;">
         <h3 style="color: #FFA500;">📄 Registered Address</h3>
-        <p>House Opp. Bk No. 684,<br>
-        Ulhasnagar-2, Kalyan,<br>
-        Thane District, Maharashtra – 421002</p>
+        <p>House Opp. Bk No. 684,<br> Ulhasnagar-2, Kalyan,<br> Thane District, Maharashtra – 421002</p>
       </div>
       <p style="font-size: 16px; margin-bottom: 20px;">Secure Investment Solutions | 15+ Years of Trusted Experience</p>
-      <a href="/contact" style="
-        background-color: #007bff;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-      ">Contact Us</a>
+      <a href="/contact" style=" background-color: #007bff; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Contact Us</a>
     </div>
   </footer>
 
@@ -316,5 +320,7 @@
       `;
     }
   </script>
+
 </body>
+
 </html>
