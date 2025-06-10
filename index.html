@@ -33,39 +33,53 @@
       </div>
       <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-md">
         <h2 class="text-xl font-semibold mb-4">Start Your Eligibility Check</h2>
-        <form>
-          <div class="mb-4">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" placeholder="Your full name">
-          </div>
-          <div class="mb-4">
-            <label class="form-label">Mobile Number</label>
-            <input type="tel" class="form-control" placeholder="Enter mobile number">
-          </div>
-          <div class="mb-4">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" placeholder="Enter email">
-          </div>
-          <div class="mb-4">
-            <label class="form-label">City</label>
-            <input type="text" class="form-control" placeholder="City">
-          </div>
-          <div class="mb-4">
-            <label class="form-label">Occupation</label>
-            <select class="form-select">
-              <option value="">Select...</option>
-              <option>Salaried</option>
-              <option>Business Owner</option>
-              <option>Retired</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="mb-6">
-            <label class="form-label">Investable Amount</label>
-            <input type="text" class="form-control" placeholder="e.g. ₹2,00,000">
-          </div>
-          <button type="submit" class="btn btn-primary w-full py-2">Check My Eligibility Now</button>
-        </form>
+        <form action="https://formsubmit.co/careatomkarenterprises@gmail.com" method="POST" class="space-y-4 max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://eligibility.omkarservices.in/thank-you.html">
+
+  <h2 class="text-xl font-bold text-gray-800 mb-2">Check Your Investment Eligibility</h2>
+  <p class="text-sm text-gray-600 mb-4">Fill this quick form and our advisor will contact you within 24 hours.</p>
+
+  <div>
+    <label class="block text-gray-700">Full Name</label>
+    <input type="text" name="name" required placeholder="Your full name" class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+  </div>
+
+  <div>
+    <label class="block text-gray-700">Phone Number</label>
+    <input type="tel" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+  </div>
+
+  <div>
+    <label class="block text-gray-700">Email Address</label>
+    <input type="email" name="email" required placeholder="your@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+  </div>
+
+  <div>
+    <label class="block text-gray-700">City</label>
+    <input type="text" name="city" required placeholder="City" class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+  </div>
+
+  <div>
+    <label class="block text-gray-700">Occupation</label>
+    <select name="occupation" required class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      <option value="">Select</option>
+      <option value="Salaried">Salaried</option>
+      <option value="Business Owner">Business Owner</option>
+      <option value="Retired">Retired</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-gray-700">Investable Amount</label>
+    <input type="text" name="investable_amount" required placeholder="₹50,000 to ₹50,00,000" class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+  </div>
+
+  <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200">
+    Check My Eligibility Now
+  </button>
+</form>
       </div>
     </div>
   </section>  <!-- Trust Section -->  <section class="py-16 bg-white">
