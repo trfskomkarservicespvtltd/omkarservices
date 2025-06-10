@@ -1,261 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Omkar Enterprises | Secure Investment Plans</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check your investment eligibility with Omkar Enterprises. Guaranteed monthly returns, capital protection, and notarized agreements.">
+  <title>Eligibility | Omkar Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #1f2937;
+      font-family: 'Poppins', sans-serif;
     }
-
-    .hero {
-      position: relative;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .hero img {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.6);
-      padding: 1.5rem 2rem;
-      color: white;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 600px;
-    }
-    .hero-text h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .calculator {
-      background: white;
-      margin: 2rem auto 1rem;
-      padding: 1.5rem;
-      border-radius: 12px;
-      max-width: 500px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-    .calculator input, .calculator select {
-      padding: 0.75rem;
-      width: 100%;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      box-sizing: border-box;
-    }
-    .calculator button {
-      background: #1e3a8a;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 1rem;
-    }
-    .results {
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    .welcome {
-      padding: 1rem 1rem 2rem;
-      text-align: center;
-    }
-    .welcome h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .welcome p {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .cta a {
-      background: #f59e0b;
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .trust-badge {
+      font-size: 0.875rem;
+      background-color: #e2e8f0;
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
       display: inline-block;
-    }
-
-    .faq-section {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    details {
-      background: white;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      cursor: pointer;
-    }
-    summary {
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    @media (max-width: 600px) {
-      .hero-text h1 {
-        font-size: 1.5rem;
-      }
-      .hero-text {
-        padding: 1rem;
-      }
-      .welcome h2 {
-        font-size: 1.5rem;
-      }
-      .cta a {
-        width: 90%;
-      }
     }
   </style>
 </head>
-<body>
-
-  <!-- HERO -->
-  <section class="hero">
-    <img src="assets/hero-banner.png" alt="Omkar Enterprises Hero Banner">
-    <div class="hero-text">
-      <h1>Welcome to Omkar Enterprises</h1>
-      <p>Your Trusted Fixed-Return Investment Partner</p>
+<body class="bg-white text-gray-900">  <!-- Hero Section -->  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 lg:flex items-center justify-between">
+      <div class="lg:w-1/2 mb-12 lg:mb-0">
+        <h1 class="text-4xl font-bold mb-4">Check Your Investment Eligibility</h1>
+        <p class="mb-6 text-lg">Earn fixed monthly returns with 100% capital protection. Backed by 15+ years of trusted market experience.</p>
+        <div class="mb-4">
+          <span class="trust-badge">✔️ Notarized Agreements</span>
+          <span class="trust-badge">🏦 20% Bank Guarantee</span>
+          <span class="trust-badge">🔐 Capital Protection</span>
+        </div>
+      </div>
+      <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Start Your Eligibility Check</h2>
+        <form>
+          <div class="mb-4">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Your full name">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" placeholder="Enter mobile number">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">City</label>
+            <input type="text" class="form-control" placeholder="City">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Occupation</label>
+            <select class="form-select">
+              <option value="">Select...</option>
+              <option>Salaried</option>
+              <option>Business Owner</option>
+              <option>Retired</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label class="form-label">Investable Amount</label>
+            <input type="text" class="form-control" placeholder="e.g. ₹2,00,000">
+          </div>
+          <button type="submit" class="btn btn-primary w-full py-2">Check My Eligibility Now</button>
+        </form>
+      </div>
     </div>
-  </section>
-
-  <!-- CALCULATOR -->
-  <section class="calculator">
-    <h2>Investment Returns Calculator</h2>
-    <label for="amount">Enter Investment Amount (₹):</label>
-    <input type="number" id="amount" placeholder="e.g., 100000" min="10000" />
-
-    <label for="security">Select Security Type:</label>
-    <select id="security">
-      <option value="25">Bank Guarantee – 25%</option>
-      <option value="35">Bank Guarantee – 35%</option>
-      <option value="45">Bank Guarantee – 45%</option>
-      <option value="50">Bank Guarantee – 50%</option>
-    </select>
-
-    <button onclick="calculateReturns()">Calculate Returns</button>
-
-    <div class="results" id="output"></div>
-  </section>
-
-  <!-- WELCOME TEXT -->
-  <section class="welcome">
-    <h2>Guaranteed Returns, Zero Risk</h2>
-    <p>At Omkar Enterprises, we provide secured monthly returns on your investments. Our experts manage the market, you enjoy the profits. Simple, safe, and transparent.</p>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSXa8WO6ARxL1lYE3S6VltR6K0S1GVSaee3yylb8JjxVwumg/viewform?usp=sharing&ouid=101721087846810975042" target="_blank">
-      Know More / Get Started
-    </a>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section">
-    <h2 style="text-align:center;">Frequently Asked Questions</h2>
-
-    <details>
-      <summary>Is my investment 100% safe?</summary>
-      <p>Yes. We offer post-dated cheques, notary agreements, and bank guarantees on higher investments. You take no market risk—we manage everything.</p>
-    </details>
-
-    <details>
-      <summary>What returns can I expect?</summary>
-      <p>You get fixed monthly returns based on your capital. Typically, returns are between ₹2,000 to ₹8,000 monthly for ₹1L to ₹4L investments.</p>
-    </details>
-
-    <details>
-      <summary>What is the duration of investment?</summary>
-      <p>12 months. Your capital is fully repaid in monthly installments along with interest.</p>
-    </details>
-
-    <details>
-      <summary>How can I invest?</summary>
-      <p>Click the "Know More / Get Started" button to fill out the Google Form. Our team will connect with you and guide you through KYC and investment steps.</p>
-    </details>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2025 Omkar Enterprises | Powered by TRFSK Omkar Services Pvt. Ltd.
-  </footer>
-
-  <script>
-    const returnRates = {
-      25: { ror: 2.063, annual: 25 },
-      35: { ror: 1.988, annual: 24 },
-      45: { ror: 1.913, annual: 23 },
-      50: { ror: 1.875, annual: 23 }
-    };
-
-    function calculateReturns() {
-      const amount = parseFloat(document.getElementById('amount').value);
-      const security = parseInt(document.getElementById('security').value);
-
-      if (!amount || amount < 10000) {
-        document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
-        return;
-      }
-
-      if (amount < 100000) {
-        document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000. Please enter a higher amount.</strong>';
-        return;
-      }
-
-      const ror = returnRates[security];
-      const monthly = Math.round((amount * ror.ror) / 100);
-      const annual = monthly * 12;
-
-      const fdAnnual = Math.round((amount * 9) / 100);
-      const bondAnnual = Math.round((amount * 10) / 100);
-      const equityAnnual = Math.round((amount * 12) / 100);
-
-      document.getElementById('output').innerHTML = `
-        <strong>With Bank Guarantee at ${security}%:</strong><br>
-        ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
-        ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
-
-        <strong>Compare with Other Options:</strong><br>
-        • Fixed Deposit (9%): ₹${fdAnnual.toLocaleString()} / year<br>
-        • Corporate Bonds (10%): ₹${bondAnnual.toLocaleString()} / year<br>
-        • Equity Mutual Funds (12%): ₹${equityAnnual.toLocaleString()} / year<br><br>
-
-        <em>Note: Higher capital security typically results in slightly lower returns. Choose wisely based on your financial goals.</em>
-      `;
-    }
-  </script>
-</body>
+  </section>  <!-- Trust Section -->  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-8">Why Investors Trust Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl">🔒</div>
+          <h3 class="font-semibold text-lg mt-2">Risk-Free Model</h3>
+          <p>We take full market risk. You receive assured monthly payouts.</p>
+        </div>
+        <div>
+          <div class="text-4xl">🧾</div>
+          <h3 class="font-semibold text-lg mt-2">Notarized Agreements</h3>
+          <p>Each investor signs a legal agreement with repayment terms.</p>
+        </div>
+        <div>
+          <div class="text-4xl">📈</div>
+          <h3 class="font-semibold text-lg mt-2">Proven Returns</h3>
+          <p>100% repayment history with over ₹X crores disbursed.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2025 Omkar Enterprises | <a href="mailto:care@omkarenterprises.in" class="underline">care@omkarenterprises.in</a></p>
+    <p><a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Disclaimer</a></p>
+  </footer></body>
 </html>
