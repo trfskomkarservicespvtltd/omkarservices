@@ -149,57 +149,6 @@
     </div>
   </div>
 </section>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-6 text-center">
-  <p>© 2025 Omkar Enterprises | <a href="mailto:care@omkarenterprises.in" class="underline">care@omkarenterprises.in</a></p>
-  <p><a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Disclaimer</a></p>
-</footer>
-
-<!-- Calculator Script -->
-<script>
-  const returnRates = {
-    25: { ror: 2.063, annual: 25 },
-    35: { ror: 1.988, annual: 24 },
-    45: { ror: 1.913, annual: 23 },
-    50: { ror: 1.875, annual: 23 }
-  };
-
-  function calculateReturns() {
-    const amount = parseFloat(document.getElementById('amount').value);
-    const security = parseInt(document.getElementById('security').value);
-
-    if (!amount || amount < 10000) {
-      document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
-      return;
-    }
-
-    if (amount < 100000) {
-      document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000. Please enter a higher amount.</strong>';
-      return;
-    }
-
-    const ror = returnRates[security];
-    const monthly = Math.round((amount * ror.ror) / 100);
-    const annual = monthly * 12;
-
-    const fdAnnual = Math.round((amount * 9) / 100);
-    const bondAnnual = Math.round((amount * 10) / 100);
-    const equityAnnual = Math.round((amount * 12) / 100);
-
-    document.getElementById('output').innerHTML = `
-      <strong>With Bank Guarantee at ${security}%:</strong><br>
-      ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
-      ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
-
-      <strong>Compare with Other Options:</strong><br>
-      • Fixed Deposit (9%): ₹${fdAnnual.toLocaleString()} / year<br>
-      • Corporate Bonds (10%): ₹${bondAnnual.toLocaleString()} / year<br>
-      • Equity Mutual Funds (12%): ₹${equityAnnual.toLocaleString()} / year<br><br>
-
-      <em>Note: Higher capital security typically results in slightly lower returns. Choose wisely based on your financial goals.</em>
-    `;
-  }
 </script>
 <!-- FAQ Section -->
 <section class="py-16 bg-gray-100">
@@ -271,5 +220,56 @@
     </div>
   </div>
 </section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6 text-center">
+  <p>© 2025 Omkar Enterprises | <a href="mailto:care@omkarenterprises.in" class="underline">care@omkarenterprises.in</a></p>
+  <p><a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Disclaimer</a></p>
+</footer>
+
+<!-- Calculator Script -->
+<script>
+  const returnRates = {
+    25: { ror: 2.063, annual: 25 },
+    35: { ror: 1.988, annual: 24 },
+    45: { ror: 1.913, annual: 23 },
+    50: { ror: 1.875, annual: 23 }
+  };
+
+  function calculateReturns() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const security = parseInt(document.getElementById('security').value);
+
+    if (!amount || amount < 10000) {
+      document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
+      return;
+    }
+
+    if (amount < 100000) {
+      document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000. Please enter a higher amount.</strong>';
+      return;
+    }
+
+    const ror = returnRates[security];
+    const monthly = Math.round((amount * ror.ror) / 100);
+    const annual = monthly * 12;
+
+    const fdAnnual = Math.round((amount * 9) / 100);
+    const bondAnnual = Math.round((amount * 10) / 100);
+    const equityAnnual = Math.round((amount * 12) / 100);
+
+    document.getElementById('output').innerHTML = `
+      <strong>With Bank Guarantee at ${security}%:</strong><br>
+      ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
+      ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
+
+      <strong>Compare with Other Options:</strong><br>
+      • Fixed Deposit (9%): ₹${fdAnnual.toLocaleString()} / year<br>
+      • Corporate Bonds (10%): ₹${bondAnnual.toLocaleString()} / year<br>
+      • Equity Mutual Funds (12%): ₹${equityAnnual.toLocaleString()} / year<br><br>
+
+      <em>Note: Higher capital security typically results in slightly lower returns. Choose wisely based on your financial goals.</em>
+    `;
+  }
+
 </body>
 </html>
