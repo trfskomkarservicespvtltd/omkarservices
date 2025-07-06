@@ -1,13 +1,14 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPRLCQ23FQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-FPRLCQ23FQ');
-  </script>  <meta charset="UTF-8" />
+  </script>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Check your investment eligibility with Omkar Enterprises. Guaranteed monthly returns, capital protection, and notarized agreements.">
   <title>Evaluate Investment Fit | Omkar Enterprises</title>
@@ -85,95 +86,63 @@
     .logo {
       max-height: 60px;
     }
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-    .hot-deals-btn {
+    .hot-deal-btn {
       position: fixed;
-      bottom: 20px;
+      bottom: 80px;
       right: 20px;
-      background-color: #f26522;
+      background-color: #dc2626;
       color: white;
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 12px 20px;
+      border-radius: 9999px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      animation: pulse 1.8s infinite;
       z-index: 9999;
-      animation: bounce 1.5s infinite;
+      text-decoration: none;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
-</head><body class="bg-white text-gray-900">
-  <!-- Header -->
-  <header class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
-    <div class="flex flex-col items-start md:flex-row md:items-center md:space-x-3">
-      <img src="assets/logo.png" alt="Omkar Logo" class="h-8 w-auto md:h-10" />
-      <span class="text-sm md:text-xl font-semibold text-gray-800 mt-1 md:mt-0">TRFSK OMKAR SERVICES PVT LTD</span>
-    </div>
-    <a href="#faq" class="btn btn-outline-primary">FAQ</a>
-  </header>  <!-- Hero Section -->  <section class="hero">
-    <div class="hero-content max-w-3xl px-4">
-      <h1 class="text-5xl font-bold mb-4">Secure Monthly Returns, Zero Market Risk</h1>
-      <p class="text-xl mb-6">Enjoy guaranteed monthly income, 100% capital protection backed by notarized agreements and bank guarantees.</p>
-      <a href="#amount" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
-        Calculate Your Returns
-      </a>
-    </div>
-  </section>  <!-- (Keep rest of the HTML content same as yours) -->  <!-- Footer -->  <footer style="background-color: #000; color: #fff; padding: 40px 20px;">
-    <div style="max-width: 1200px; margin: auto; text-align:center;">
-      <h2 style="font-size: 20px; font-weight: bold;">TRFSK OMKAR SERVICES PRIVATE LIMITED</h2>
-      <p>DNK Business Bay, Office No. 101, Pune – 411046<br/>Ulhasnagar-2, Kalyan – 421002</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSXa8WO6ARxL1lYE3S6VltR6K0S1GVSaee3yylb8JjxVwumg/viewform?usp=sharing&ouid=101721087846810975042" class="btn btn-outline-light mt-3" target="_blank">Contact Us</a>
-      <p class="mt-3">
-        <a href="https://www.google.com/search?q=Omkar+Enterprises&kgmid=/g/11md0gptnd" target="_blank" style="color: #4ade80; text-decoration: underline;">
-          🌐 View Our Verified Google Business Profile
-        </a>
-      </p>
-    </div>
-  </footer>  <!-- Floating Hot Deals Button -->  <a href="https://www.omkarservices.in/hot-deals" class="hot-deals-btn" target="_blank">
-    🔥 Today's Hot Deals
-  </a>  <!-- Calculator Script -->  <script>
-    const returnRates = {
-      25: { ror: 2.063, annual: 25 },
-      35: { ror: 1.988, annual: 24 },
-      45: { ror: 1.913, annual: 23 },
-      50: { ror: 1.875, annual: 23 }
-    };
-
-    function calculateReturns() {
-      const amount = parseFloat(document.getElementById('amountInput').value);
-      const security = parseInt(document.getElementById('security').value);
-      if (!amount || amount < 10000) {
-        document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
-        return;
-      }
-      if (amount < 100000) {
-        document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000.</strong>';
-        return;
-      }
-      const ror = returnRates[security];
-      const monthly = Math.round((amount * ror.ror) / 100);
-      const annual = monthly * 12;
-      const fdAnnual = Math.round((amount * 9) / 100);
-      const bondAnnual = Math.round((amount * 10) / 100);
-      const equityAnnual = Math.round((amount * 12) / 100);
-
-      document.getElementById('output').innerHTML = `
-        <strong>With Bank Guarantee at ${security}%:</strong><br>
-        ➔ Monthly Return: ₹${monthly.toLocaleString()}<br>
-        ➔ Annual Return: ₹${annual.toLocaleString()}<br><br>
-        <strong>Compare:</strong><br>
-        • FD (9%): ₹${fdAnnual.toLocaleString()}<br>
-        • Bonds (10%): ₹${bondAnnual.toLocaleString()}<br>
-        • Equity (12%): ₹${equityAnnual.toLocaleString()}<br><br>
-        <em>Choose security based on your risk comfort & financial goals.</em>
-      `;
+</head>
+<body class="bg-white text-gray-900"><!-- EXISTING CONTENT ABOVE --><!-- Insert the rest of your page content here --><!-- Hot Deal Floating Button --><a href="https://www.omkarservices.in/hot-deals" class="hot-deal-btn" target="_blank">
+  🔥 Today's Hot Deals
+</a><!-- Calculator Script --><script>
+  const returnRates = {
+    25: { ror: 2.063, annual: 25 },
+    35: { ror: 1.988, annual: 24 },
+    45: { ror: 1.913, annual: 23 },
+    50: { ror: 1.875, annual: 23 }
+  };
+  function calculateReturns() {
+    const amount = parseFloat(document.getElementById('amountInput').value);
+    const security = parseInt(document.getElementById('security').value);
+    if (!amount || amount < 10000) {
+      document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
+      return;
     }
-  </script></body>
+    if (amount < 100000) {
+      document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000.</strong>';
+      return;
+    }
+    const ror = returnRates[security];
+    const monthly = Math.round((amount * ror.ror) / 100);
+    const annual = monthly * 12;
+    const fdAnnual = Math.round((amount * 9) / 100);
+    const bondAnnual = Math.round((amount * 10) / 100);
+    const equityAnnual = Math.round((amount * 12) / 100);
+    document.getElementById('output').innerHTML = `
+      <strong>With Bank Guarantee at ${security}%:</strong><br>
+      ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
+      ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
+      <strong>Compare:</strong><br>
+      • FD (9%): ₹${fdAnnual.toLocaleString()}<br>
+      • Bonds (10%): ₹${bondAnnual.toLocaleString()}<br>
+      • Equity (12%): ₹${equityAnnual.toLocaleString()}<br><br>
+      <em>Choose security based on your risk comfort & financial goals.</em>
+    `;
+  }
+</script></body>
 </html>
