@@ -272,7 +272,7 @@ max-height: 60px;
     <select name="Investment" required class="form-control mt-1">    
       <option value="">Select</option>    
       <option value="25,000">25,000</option>    
-      <option value="50,000">50,000/option>    
+      <option value="50,000">50,000</option>    
       <option value="1,00,000">1,00,000</option>    
       <option value="Above 2,00,000">Above 2,00,000</option>    
     </select>    
@@ -289,7 +289,10 @@ max-height: 60px;
 
   <div>    
     <label class="block text-gray-700">Preferred Contact Method:</label>    
-    <input type="text" name="call or Whatsapp" required class="form-control mt-1">    
+	<select name="How to contact you" required class="form-control mt-1">    
+      <option value="">Select</option>    
+      <option value="Call">Call</option>    
+      <option value="Whatsapp">Whatsapp</option>     
   </div>    
 
   <button type="submit" class="btn btn-success w-100 mt-3">Submit</button>    
